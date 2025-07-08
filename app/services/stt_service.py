@@ -5,3 +5,4 @@ def transcribe_audio(audio_bytes):
     dg = Deepgram("DEEPGRAM_API_KEY")
     response = dg.transcription.prerecorded({'buffer': audio_bytes, 'mimetype': 'audio/wav'})
     return response['results']['channels'][0]['alternatives'][0]['transcript']
+    
